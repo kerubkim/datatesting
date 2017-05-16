@@ -5,7 +5,7 @@ var routes = require('./../controllers/routes.js');
 module.exports = function(app) {
 
     // Tasks routes ===================================================
-    app.get('/users-test', function(req, res) {
+    app.get('/data-test', function(req, res) {
         routes.index(req, res);
     });
 
