@@ -12,7 +12,7 @@ module.exports = (function() {
         index: function(req, res) {
           //return that data in res.json()
           res.json({message: "This is a dummy data.",reason:"For testing purposes."});
-        }
+        },
         users: function(req,res){
           // retrieving all users
           User.find({}).exec(function(err,data){
@@ -22,7 +22,7 @@ module.exports = (function() {
               res.json(data);
             }
           });
-        }
+        },
         newuser: function(req,res){
           // creating user object
           var user = new User({name:req.body.name,username:req.body.username,password:req.body.password,profession:req.body.profession,description:req.body.description});
