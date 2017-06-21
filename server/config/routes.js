@@ -18,5 +18,18 @@ module.exports = function(app) {
     app.post('/users/new',function(req,res){
       routes.newuser(req,res);
     });
+    // A route for retrieving a user
+    app.get('/users/:id',function(req,res){
+      routes.getuser(req,res);
+    });
+    // A route for updating a user
+    app.post('/users/update/:id',function(req,res){
+      routes.updateuser(req,res);
+    });
+    // A route for deleting a user
+    app.delete('/users/delete/:id',function(req,res){
+      routes.deleteuser(req,res);
+    });
+
 
 };
